@@ -1,7 +1,5 @@
 # Proxy scraper
 
-Scrape more than 1K HTTP - HTTPS - SOCKS4 - SOCKS5 proxies in less than 2 seconds.
-
 Scraping fresh public proxies from different sources:
 
 - [sslproxies.org](http://sslproxies.org) (HTTP, HTTPS)
@@ -32,7 +30,3 @@ python3 proxyScraper.py -p http
 - With `-o` or `--output`, create and write to a .txt file. (Default is **output.txt**)
 - With `-v` or `--verbose`, more details.
 - With `-h` or `--help`, Show help to who did't read this README.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
