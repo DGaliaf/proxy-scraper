@@ -1,8 +1,8 @@
 from scraper import Scraper
 
 
-# For scraping live proxylist from github
 class GitHubScraper(Scraper):
+    """For scraping live proxylist from github"""
 
     async def handle(self, response):
         tempproxies = response.text.split("\n")

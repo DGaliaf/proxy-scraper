@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 from scraper import Scraper
 
 
-# For websites using table in html
 class GeneralTableScraper(Scraper):
+    """For websites using table"""
 
     async def handle(self, response):
         soup = BeautifulSoup(response.text, "html.parser")
@@ -23,8 +23,8 @@ class GeneralTableScraper(Scraper):
         return "\n".join(proxies)
 
 
-# For websites using div in html
 class GeneralDivScraper(Scraper):
+    """For websites using div"""
 
     async def handle(self, response):
         soup = BeautifulSoup(response.text, "html.parser")
@@ -40,4 +40,5 @@ class GeneralDivScraper(Scraper):
                 count += 1
             proxy = proxy.rstrip(":")
             proxies.add(proxy)
+
         return "\n".join(proxies)

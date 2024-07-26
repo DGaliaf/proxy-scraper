@@ -3,6 +3,7 @@ from scraper import Scraper
 
 
 class ProxyScrapeScraper(Scraper):
+    """For proxyscrape.com"""
 
     def __init__(self, method, timeout=1000, country="All"):
         self.timout = timeout

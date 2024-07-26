@@ -3,6 +3,7 @@ from scraper import Scraper
 
 
 class ProxyListDownloadScraper(Scraper):
+    """For proxy-list.download"""
 
     def __init__(self, method, anon):
         self.anon = anon

@@ -1,5 +1,9 @@
 # From spys.me
+from scraper import Scraper
+
+
 class SpysMeScraper(Scraper):
+    """For spys.me"""
 
     def __init__(self, method):
         super().__init__(method, "https://spys.me/{mode}.txt")

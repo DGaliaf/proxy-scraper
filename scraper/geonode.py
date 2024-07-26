@@ -1,8 +1,8 @@
 from scraper import Scraper
 
 
-# From geonode.com - A little dirty, grab http(s) and socks but use just for socks
 class GeoNodeScraper(Scraper):
+    """From geonode.com"""
 
     def __init__(self, method, limit="500", page="1", sort_by="lastChecked", sort_type="desc"):
         self.limit = limit
