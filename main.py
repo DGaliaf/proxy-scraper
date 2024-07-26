@@ -8,15 +8,13 @@ import time
 import httpx
 from bs4 import BeautifulSoup
 
-
-
-
-
-
-
-
-
-
+from scraper.generalscraper import GeneralTableScraper, GeneralDivScraper
+from scraper.geonode import GeoNodeScraper
+from scraper.github import GitHubScraper
+from scraper.proxylist import ProxyListDownloadScraper
+from scraper.proxyscrape import ProxyScrapeScraper
+from scraper.spys import SpysMeScraper
+from utils import verbose_print
 
 scrapers = [
     SpysMeScraper("http"),
@@ -46,11 +44,6 @@ scrapers = [
 ]
 
 
-def verbose_print(verbose, message):
-    if verbose:
-        print(message)
-
-
 async def scrape(method, output, verbose):
     now = time.time()
     methods = [method]
@@ -59,6 +52,7 @@ async def scrape(method, output, verbose):
     proxy_scrapers = [s for s in scrapers if s.method in methods]
     if not proxy_scrapers:
         raise ValueError("Method not supported")
+
     verbose_print(verbose, "Scraping proxies...")
     proxies = []
 
